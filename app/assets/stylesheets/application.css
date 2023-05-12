@@ -13,3 +13,59 @@
  *= require_tree .
  *= require_self
  */
+
+ h1, p {
+  text-align: center;
+}
+
+.todo-item {
+  text-align: center;
+}
+
+.todo-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-name {
+  margin: 0;
+  padding-right: 10px;
+  padding-top: 5px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-container form {
+  margin-right: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

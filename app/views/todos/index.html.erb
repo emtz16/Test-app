@@ -2,11 +2,23 @@
 
 <h1>Todos</h1>
 
+<p>
+  <%= link_to "New todo", new_todo_path %>
+</p>
+
 <div id="todos">
   <% @todos.each do |todo| %>
-    <%= link_to todo.name, todo %>
+    <div class="todo-item">
+      <div class="todo-name">
+        <%= link_to todo.name, todo %>
+      </div>
+      <div class="todo-actions">
+        <div class="button-container">
+          <%= button_to 'Edit', edit_todo_path(todo), method: :get, class: 'btn btn-primary' %>
+          <%= button_to 'Delete', todo, method: :delete, data: { confirm: 'Are you sure you want to delete this todo?' }, class: 'btn btn-danger' %>
+        </div>
+      </div>
+    </div>
   <% end %>
 </div>
-<P>
-<%= link_to "New todo", new_todo_path %>
-</P>
+
