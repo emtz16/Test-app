@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= @import "font-awesome"
  */
 
  h1, p {
@@ -19,7 +20,11 @@
 }
 
 .todo-item {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  margin: 5px 0;
 }
 
 .todo-actions {
@@ -30,8 +35,6 @@
 
 .todo-name {
   margin: 0;
-  padding-right: 10px;
-  padding-top: 5px;
 }
 
 .button-container {
@@ -42,6 +45,30 @@
 
 .button-container form {
   margin-right: 5px;
+}
+
+#container {
+  margin: auto;
+  width: 200px;
+  background: #fef8f8;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.container-title {
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: fantasy;
+  color: #575656;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container-title a {
+  color: #575656
 }
 
 

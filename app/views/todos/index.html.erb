@@ -1,12 +1,12 @@
+
 <p style="color: green"><%= notice %></p>
 
-<h1>Todos</h1>
-
-<p>
-  <%= link_to "New todo", new_todo_path %>
-</p>
-
-<div id="todos">
+<div id="container">
+  
+  <div class="container-title">
+    <div>Todos</div>
+    <div><%= link_to "New todo", new_todo_path %></div>
+  </div>
   <% @todos.each do |todo| %>
     <div class="todo-item">
       <div class="todo-name">
