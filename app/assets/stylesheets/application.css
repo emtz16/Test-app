@@ -12,8 +12,10 @@
  *
  *= require_tree .
  *= require_self
- *= @import "font-awesome"
+ *= 
  */
+ 
+ @import "font-awesome";
 
  h1, p {
   text-align: center;
@@ -50,7 +52,7 @@
 #container {
   margin: auto;
   width: 200px;
-  background: #fef8f8;
+  background: #f1f0df;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
@@ -72,7 +74,14 @@
 }
 
 
-
+.edit-name {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px;
+}
 
 
 

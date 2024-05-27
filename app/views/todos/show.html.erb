@@ -1,53 +1,57 @@
-<strong><%= link_to 'Back', todos_path %></strong>
+ <p id="notice"><%= notice %></p>
 
-<p id="notice"><%= notice %></p>
+<div id="container">
+  <div class="container-title">
+
+  <strong><%= link_to 'Back', todos_path %></strong>
+
+
+
+</div>
 
 <p>
-  <strong>Name:</strong>
-  <%= @todo.name %> 
-</p>
-<div>
-<%= form_for @task do |f| %>
+    <strong>Name:</strong>
+    <%= @todo.name %> 
+  </p>
+  <div>
+  <%= form_for @task do |f| %>
 
-  <p><%= f.text_field :title %>
+    <p><%= f.text_field :title %>
 
-  <%= f.hidden_field :done, :value => false %>
-  <%= f.hidden_field :todo_id, :value => @todo.id %>
+    <%= f.hidden_field :done, :value => false %>
+    <%= f.hidden_field :todo_id, :value => @todo.id %>
 
-  <%= f.submit "Add Task" %></p>
+    <%= f.submit "Add Task" %></p>
 
-<% end %>
-</div>
-<div>
-<% @tasks.each do |task| %>
+  <% end %>
+  </div>
+  <div>
+  <% @tasks.each do |task| %>
 
-  <% if task.done == true %>
+    <% if task.done == true %>
 
-  
-      <%= form_for task do |f| %>    
+    
+        <%= form_for task do |f| %>    
 
-        <strike>
-  <%= task.title %>
-</strike> <%= f.check_box :done, :value => task.done %>
+          <strike>
+    <%= task.title %>
+  </strike> <%= f.check_box :done, :value => task.done %>
 
-        <%= f.submit "Undo" %>
+          <%= f.submit "Undo" %>
+        <% end %>
+
+      <% elsif task.done == false %>
+    
+            <%= form_for task do |f| %>    
+
+              <%= task.title %> <%= f.check_box :done, :value => task.done %>
+
+              <%= f.submit "Done" %>
+            <% end %>
+
       <% end %>
-
-    <% elsif task.done == false %>
-  
-          <%= form_for task do |f| %>    
-
-            <%= task.title %> <%= f.check_box :done, :value => task.done %>
-
-            <%= f.submit "Done" %>
-          <% end %>
-
-    <% end %>
-<% end %>
-</div>
-
-
-
+  <% end %>
+  </div>
 
 
  

@@ -1,8 +1,12 @@
-<h1>Editing todo</h1>
+<div id="container">
+  <div class="container-title">
+    <div>Editing todo</div>
+  </div>
 
-<%= render "form", todo: @todo %>
+  <div class = "edit-name">
+    <div> <%= render "form", todo: @todo %></div>
+  </div>
 
-<br>
 
 <p>
   <%= link_to "Show this todo", @todo %> |
